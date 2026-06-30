@@ -6,6 +6,7 @@
 ---
 - #### [Data analytics on Coffeeshop relationship with customers](https://github.com/J-Soh/Projects/blob/main/Data%20Analytics%20on%20CofficeShop%20relationship%20with%20customers/CoffeeShop_code_Analysis.ipynb)
 - #### [Arduino Automatic Monitoring System with SQL](https://github.com/J-Soh/Projects/blob/main/IoT%20Projects/Arduino%20automatic%20monitoring%20system%20with%20SQL/Overview.md)
+- [Build a Calculator from scratch](https://github.com/J-Soh/Projects/tree/main/HTML/Calculator%20App)
 
 - Other projects (React & OpenGL) that are in another repo: 
   - #### [React Investment Calculator](https://github.com/J-Soh/React/tree/main/invest-calc)
