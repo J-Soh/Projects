@@ -1,0 +1,63 @@
+/* ctrl + f5 on browser to show changes */
+body {
+    display: flex; /* Enables flexBox layout system */
+    justify-content: center;  /* Move card in x-axis until it reaches center */
+    align-items: center; /* Move card in y-axis until it reaches center */
+    height: 100vh; /* Fill the screen based on physical screen */
+    margin: 0; /* No spacing around <body>. Default is 8. */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: Arial, sans-serif;
+}
+
+.calculator { /* `Box-shadow` is card design look */
+    background: #2d2d2d;
+    border-radius: 20px; /* higher value = more rounded corners*/
+    padding: 20px; /* spacing of inside card box */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* box-shadow: X-offset  Y-offset  blur-radius  color; */
+    width: 320px;
+}
+
+.display {
+    background: #1e1e1e;
+    color: white;
+    font-size: 48px;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 60px;
+    word-wrap: break-word; /* Create newline for long numbers when it is about to go outside box */
+    overflow: hidden; /* Hides any long numbers that is going outside display box */
+}
+
+.buttons { /* All buttons layout */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns: [ 1fr ] [ 1fr ] [ 1fr ] [ 1fr ] */
+    gap: 10px;
+}
+
+button { /* Indiviual button */
+    padding: 20px;
+    font-size: 20px;
+    border: none; /* Removes the default border around the element. */
+    border-radius: 10px; /* How curve buttons are */
+    cursor: pointer; /* Changes the mouse cursor to a pointing hand */
+    transition: all 0.2s; /* Allows animation in button:hover{} */
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(0.9); /* decrease button size when hover over */
+    opacity: 0.8;
+}
+
+button:active { /* Increase button size when click */
+    transform: scale(1.15);
+}
+
+.number { background: #4a4a4a; color: white; }
+.operator { background: #ff9500; color: white; }
+.function { background: #6c757d; color: white; }
+.equals { background: #28a745; color: white; }
+.zero { grid-column: span 2; }  /* width of 2 columns instead of 1 */
+.clear { background: #dc3545; color: white; }

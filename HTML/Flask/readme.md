@@ -1,0 +1,1 @@
+- To run: In root folder > `python app.py`

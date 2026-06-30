@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!--  Tells the browser to render page using HTML5 document type (standard mode)-->  
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <meta charset="UTF-8"> <!-- Allows encode characters like `÷` to display instead of Ã -->
+</head>
+<body>
+    <h2>Calculator</h2>
+    
+    <!-- Display -->
+    <input type="text" id="display" readonly>
+    <br><br>
+    
+    <!-- Button layout-->
+    <!-- onclick="js code" -->
+    <button onclick="press('1')">1</button>
+    <button onclick="press('2')">2</button>
+    <button onclick="press('3')">3</button>
+    <button onclick="press('+')">+</button>
+    <button onclick="bs()">Backspace</button>
+    <br>
+    
+    <button onclick="press('4')">4</button>
+    <button onclick="press('5')">5</button>
+    <button onclick="press('6')">6</button>
+    <button onclick="press('-')">-</button>
+    <br>
+    
+    <button onclick="press('7')">7</button>
+    <button onclick="press('8')">8</button>
+    <button onclick="press('9')">9</button>
+    <button onclick="press('*')">*</button>
+    <br>
+    
+    <button onclick="press('0')">0</button>
+    <button onclick="press('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="press('/')">÷</button>
+    <br><br>
+    
+    <button onclick="clearDisplay()">Clear</button>
+
+    <script>
+        // var = variable. So display is a variable name. 
+        var display = document.getElementById('display');
+
+        function press(value) { 
+            // Display value onto input box
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            // Clear all display value in input box
+            display.value = '';
+        }
+
+        function bs() {
+			display.value = display.value.slice(0, -1);
+		}
+        
+        function calculate() {
+            try {
+                // eval() evaluates string "2 + 3 * 4" into result 14. 
+                display.value = eval(display.value);
+            } catch(e) {
+                display.value = 'Error'; // if user type "7 + "
+            }
+        }
+    </script>
+</body>
+</html>

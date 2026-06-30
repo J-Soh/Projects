@@ -1,0 +1,69 @@
+<!DOCTYPE html>   
+<html lang="en">            
+<body>         
+    <!-- WorkFlow: HTML form → /submit → Python function runs → response returned -->
+ 
+    <!-- POST method -->
+    <label for="user123">
+        <h3>Type info below to see how flask works:</h3>
+    </label>
+
+    <!-- `/submit123` is URL endpoint, where user data (name pwd) is `POST` to there-->
+<form action="/submit123" method="post">
+
+    <!-- Text input for name -->
+    <!-- In `name ="text"`, name is KEY used when sending form data to the server (user123 = <userName>)-->
+    <!--for="text" links with id="text", so when user click on "text" it automatically move cursor into input box -->
+    <label for="move_cursor_to_inputBox">Username:</label>
+    <input type="text" id="move_cursor_to_inputBox" name="user123" placeholder="Enter name" required>
+    <br><br>
+
+    <!-- pwd type for password -->
+    <!-- pass123 (KEY) = <userPassword> (VALUE)-->
+    <label for="text">Password:</label>
+    <input type="pwd" id="text" name="pass123" placeholder="Enter passwrd" required>
+    <br><br>
+    
+    <!-- Radio buttons for gender -->
+    <label>Gender:</label>
+
+    <!--`name` is KEY, `value` is value. -->
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
+
+    <!-- Allow user to type in input box-->
+    <textarea name="comment" rows="4" cols="50" placeholder="Enter comment here"></textarea><br>
+
+    <!-- Drop down box-->
+    <label for="bring">Pick a fruit:</label>
+    <select name="fruits">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+    </select>
+
+ 
+<br/><br/>
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+</form>
+
+<!------------------------------------------------------------------------------->
+<br/><br/><hr/>
+
+    <!-- GET method -->
+<label for="user123">
+    <h3>Type anything below to get replied:</h3>
+</label>
+
+<form action="/get123" method="get">
+    <input type="text" name="user123" id="user123">
+    <input type="submit" value="Search">
+</form>
+
+</body>
+</html>
