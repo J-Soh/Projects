@@ -4,5 +4,5 @@
 
 ## How to run this basic app:
 
-1. Do `git clone https://github.com/J-Soh/Calculator-App.git`
-2. In root folder > run `python -m http.server 8000`
+1. Do `git clone https://github.com/J-Soh/Projects.git`
+2. Navigate to `HTML/Calculator App` folder > run `python -m http.server 8000`
